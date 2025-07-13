@@ -29,7 +29,6 @@ fetch('data_by_year.json')
 
         // Interactividad al hacer clic
         div.addEventListener('click', () => {
-          // Limpiar resaltado
           document.querySelectorAll('.materia').forEach(m => m.classList.remove('highlight'));
           div.classList.add('highlight');
           (materia.correlativas || []).forEach(cod => {
@@ -41,7 +40,6 @@ fetch('data_by_year.json')
       container.appendChild(column);
     });
 
-    // Dibujar líneas entre materias y sus correlativas
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
